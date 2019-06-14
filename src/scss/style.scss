@@ -1,0 +1,14 @@
+$primary: green;
+$secondary: blue;
+
+body {
+	background: $secondary;
+}
+
+li {
+	color: white;
+
+	&:nth-child(odd) {
+		color: red;
+	};
+}
