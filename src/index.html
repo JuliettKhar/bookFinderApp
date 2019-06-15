@@ -3,12 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title><%= htmlWebpackPlugin.options.title %></title>
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-		<form action="#" class="bookSearch-form">
-		<label for="search">Search for a book</label>
-		<input type="text" id="bookSearch" name="search">
-		<button type="submit">Search</button>
+		<form action="#" class="form__search">
+			<label for="search" class="search__label">
+				Search for a book
+				<input type="text" class="search__input" id="bookSearch" name="search" placeholder="⌕">
+			</label>
+			<button type="submit" class="search__button">Search</button>
 	</form>
 	<section class="results" id="results"></section>
 </body>
