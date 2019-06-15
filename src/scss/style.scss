@@ -1,14 +1,36 @@
-$primary: green;
-$secondary: blue;
-
 body {
-	background: $secondary;
+	background:  #faf7f6;
 }
 
-li {
-	color: white;
-
-	&:nth-child(odd) {
-		color: red;
-	};
+.results {
+	  margin: auto;
+    max-width: 80%;
 }
+
+.book {
+		position: relative;
+  	display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 0 0 158px;
+		height: 200px;
+    border: 2px solid #f3edeb;
+    border-radius: .25rem;
+		list-style: none;
+		background-color: white;
+    box-shadow: 0 1rem 1rem -0.75rem #dfc8c0;
+}
+
+.book__img {
+		position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.book__title {
+	  font-size: 1rem;
+    font-weight: bold;
+    color: #65002a;
+}
+
