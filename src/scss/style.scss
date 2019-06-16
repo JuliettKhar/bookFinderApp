@@ -18,13 +18,18 @@ $book-border: #f3edeb;
 		flex-wrap: wrap;
 		flex-direction: column;
 		justify-content: center;
-		padding: 0 0 0 158px;
-		height: 200px;
+		padding: 0 15px 0 140px;
+		height: 165px;
     border: 2px solid $book-border;
     border-radius: .25rem;
 		list-style: none;
 		background-color: white;
     box-shadow: 0 1rem 1rem -0.75rem $book-shadow;
+
+    &:hover {
+    transition: .4s;
+    transform: scale(1.01);
+    }
 }
 
 .book__img {
@@ -32,6 +37,10 @@ $book-border: #f3edeb;
     top: 0;
     bottom: 0;
     left: 0;
+}
+
+.book__img-size {
+	max-height: 165px;
 }
 
 $book-titleColor: #65002a;
@@ -57,6 +66,7 @@ $button-shadow: #800080;
 		background: $button-background;
     color:$button-fontColor;
     box-shadow: 0 0.4rem 1rem -0.4rem $button-shadow;
+    cursor: pointer;
 }
 
 $input-shadow: #d4b1a5;
@@ -73,7 +83,7 @@ $input-border: #f3edeb;
 
 .form__search {
 	  display: flex;
-    margin: auto;
+    margin: 20px auto;
     max-width: 80%;
 }
 
@@ -82,12 +92,6 @@ $input-border: #f3edeb;
 	flex-direction: column;
 	font-size: .9rem;
   font-weight: bold;
-}
-
-.form__search {
-	display: flex;
-	margin: auto;
-	max-width: 80%;
 }
 
 $downloadBtn-background: #663399;
@@ -100,5 +104,14 @@ $downloadBtn-fontColor: #fff;
     text-decoration: none;
     background: $downloadBtn-background;
     color: $downloadBtn-fontColor;
+}
+
+@media only screen and (max-width: 570px) {
+	.results {
+		max-width: 90%;
+	} 
+	.form__search {
+
+	}	
 }
 

@@ -15,12 +15,12 @@ export class UI {
 			console.log(book.volumeInfo.imageLinks.smallThumbnail)
 			 template += `
 			 <ul class="book">
-			 	<li class="book__img"><img src="${book.volumeInfo.imageLinks.smallThumbnail !== undefined ? book.volumeInfo.imageLinks.smallThumbnail : ' '}" alt="image is not aviliable"></li>
+			 	<li class="book__img"><img class="book__img-size"src="${book.volumeInfo.imageLinks.smallThumbnail !== undefined ? book.volumeInfo.imageLinks.smallThumbnail : '#'}" alt="image is not aviliable"></li>
 					<li class="book__title">${book.volumeInfo.title}</li>
 					<li class="book__author">by ${book.volumeInfo.authors !== undefined ? book.volumeInfo.authors : ' - '}</li>
 					<li class="book__pages">${book.volumeInfo.pageCount !== undefined ? book.volumeInfo.pageCount : ' - '} pages</li>
 					<li class="book__published">Published ${book.volumeInfo.publishedDate !== undefined ? book.volumeInfo.publishedDate : ' - '}</li>
-					<li class=""><a class="book__download" href="${book.accessInfo.webReaderLink}" target_blank>read on GooglePlay</a></li>
+					<li><a class="book__download" href="${book.accessInfo.webReaderLink}">read on GooglePlay</a></li>
 					<li><a class="book__download" href="${book.accessInfo.epub.acsTokenLink}">epub</a></li>
 					<li><a class="book__download" href="${book.accessInfo.pdf.acsTokenLink}">pdf</a></li>
 			</ul>
