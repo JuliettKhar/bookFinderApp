@@ -1,7 +1,8 @@
+$body-backgroungColor: #faf7f6;
 body {
 	margin: 0;
 	font-family: 'Nanum Gothic', sans-serif;
-	background:  #faf7f6;
+	background: $body-backgroungColor;
 }
 
 .results {
@@ -9,6 +10,8 @@ body {
     max-width: 80%;
 }
 
+$book-shadow: #dfc8c0;
+$book-border: #f3edeb;
 .book {
 		position: relative;
   	display: flex;
@@ -17,55 +20,61 @@ body {
 		justify-content: center;
 		padding: 0 0 0 158px;
 		height: 200px;
-    border: 2px solid #f3edeb;
+    border: 2px solid $book-border;
     border-radius: .25rem;
 		list-style: none;
 		background-color: white;
-    box-shadow: 0 1rem 1rem -0.75rem #dfc8c0;
+    box-shadow: 0 1rem 1rem -0.75rem $book-shadow;
 }
 
 .book__img {
 		position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
 }
 
+$book-titleColor: #65002a;
 .book__title {
-	  font-size: 1.5rem;
+	  font-size: 1.3rem;
     font-weight: bold;
-    color: #65002a;
+    color: $book-titleColor;
 }
 
+$button-background: #663399;
+$button-fontColor: #fff;
+$button-shadow: #800080;
 .search__button {
+    position: relative;
 		display: inline-flex;
 		align-self: flex-end;
-		background: rebeccapurple;
-    position: relative;
-    color: white;
-    border: none;
     padding: 0 .75rem;
-    border-radius: .25rem;
     font-size: .6rem;
+    border: none;
+    border-radius: .25rem;
     line-height: 2.8;
     text-transform: uppercase;
-    box-shadow: 0 0.4rem 1rem -0.4rem purple;
+		background: $button-background;
+    color:$button-fontColor;
+    box-shadow: 0 0.4rem 1rem -0.4rem $button-shadow;
 }
 
+$input-shadow: #d4b1a5;
+$input-border: #f3edeb;
 .search__input {
 		align-self: flex-start;
 		padding: .2rem .5rem;
+    margin-top: .25rem .25rem 0 0;
     border-radius: .25rem;
-    border: 2px solid #f3edeb;
-    margin-top: .25rem;
-    margin-right: .25rem;
-    box-shadow: 0 0.4rem 1rem -0.4rem #d4b1a5;
+    border: 2px solid $input-border;
+    box-shadow: 0 0.4rem 1rem -0.4rem $input-shadow;
 
 }
 
 .form__search {
 	  display: flex;
-    max-width: 80%;
     margin: auto;
+    max-width: 80%;
 }
 
 .search__label {
@@ -77,18 +86,19 @@ body {
 
 .form__search {
 	display: flex;
-	max-width: 80%;
 	margin: auto;
+	max-width: 80%;
 }
 
+$downloadBtn-background: #663399;
+$downloadBtn-fontColor: #fff;
 .book__download {
 		padding: .1rem .75rem;
     border-radius: .25rem;
     font-size: .6rem;
     text-transform: uppercase;
-    box-shadow: 0 0.4rem 1rem -0.4rem purple;
     text-decoration: none;
-    background: #663399;
-    color: white;
+    background: $downloadBtn-background;
+    color: $downloadBtn-fontColor;
 }
 
