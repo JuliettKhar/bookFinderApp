@@ -1,6 +1,7 @@
 const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const miniCssExtractPlugin = require("mini-css-extract-plugin");
+const mediaQueryPlugin = require("media-query-plugin");
 
 module.exports = {
 		entry: {
@@ -34,10 +35,11 @@ module.exports = {
 						include: path.resolve(__dirname, "src/scss"),
 						use: [
 						  {
-		            loader: miniCssExtractPlugin.loader,
-		            options: {}
-          		},
+		         loader: miniCssExtractPlugin.loader,
+		         options: {}
+         },
 							{loader: "css-loader"},
+							{loader: mediaQueryPlugin.loader},
 							{loader: "sass-loader"}
 						]
 				},
@@ -62,6 +64,14 @@ module.exports = {
 			new miniCssExtractPlugin({
       filename: "./css/style.bundle.css"
     }),
+			new mediaQueryPlugin({
+            include: [
+                'style'
+            ],
+            queries: {
+                'print, screen and (max-width: 570px)': 'phone'
+            }
+        }),
 		],
 		devServer: {
 			contentBase: path.join(__dirname, "build"),
